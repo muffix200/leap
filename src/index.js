@@ -5,13 +5,21 @@ import App from "./App";
 import Parent from "./Parent";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient()
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Parent />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Parent />
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

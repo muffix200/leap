@@ -14,8 +14,11 @@ import Logout from "@mui/icons-material/Logout";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import { themeContext } from "../Parent";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AccountMenu() {
+  const navigate =useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { isDark: isDarkTheme, func } = useContext(themeContext);
   const open = Boolean(anchorEl);
@@ -78,22 +81,24 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem>
-          <Avatar /> Profile
+        <MenuItem onClick={()=>{
+        navigate("/register")
+        }}>
+          <Avatar /> Shaxsiy kabinet
         </MenuItem>
         <Divider />
         <MenuItem>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
-          Settings
+          Sozlamalar
         </MenuItem>
-        <MenuItem>
+        {/* <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </div>
   );

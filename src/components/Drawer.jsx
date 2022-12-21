@@ -18,11 +18,15 @@ import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
 import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import PermPhoneMsgRoundedIcon from "@mui/icons-material/PermPhoneMsgRounded";
 import QuizRoundedIcon from "@mui/icons-material/QuizRounded";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 // --------------------------------
 import { IconButton } from "@mui/material";
 import { themeContext } from "../Parent";
+import { useNavigate } from "react-router-dom";
 
 export default function SwipeableTemporaryDrawer() {
+  const navigate = useNavigate()
   const { isDark: isDarkTheme, func } = React.useContext(themeContext);
   const [state, setState] = React.useState({
     top: false,
@@ -53,7 +57,38 @@ export default function SwipeableTemporaryDrawer() {
       <List>
         {["Asosiy", "Kurslar", "Fikrlar", "Bog'lanish", "Test"].map(
           (text, index) => (
-            <ListItem onClick={() => alert("hi")} key={text} disablePadding>
+            <ListItem onClick={() => {
+              switch(index){
+                case 0:
+                setTimeout(()=>{
+                  window.location.href="#home"
+                },100)
+
+                break;
+                case 1:
+                  setTimeout(()=>{
+                  window.location.href="#courses"
+                },100)
+
+                break;
+                case 2:
+                  setTimeout(()=>{
+                  window.location.href="#feedback"
+                },100)
+                break;
+                case 3:
+                  setTimeout(()=>{
+                    window.open('tel:950777704', '_self');
+                },100)
+                break;
+                case 4:
+                  setTimeout(()=>{
+                  window.location.href="#test"
+                },100)
+                break;
+                
+              }
+            }} key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   {index == 0 ? (
@@ -76,11 +111,19 @@ export default function SwipeableTemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {["Shaxsiy kabinet","Sozlamalar"].map((text, index) => (
+          <ListItem key={text} disablePadding onClick={()=>{
+            switch(index){
+              case 0:
+              navigate("/register")
+              break;
+              case 1:
+              break;
+            }
+          }}>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index === 0 ? <PersonRoundedIcon/>:<SettingsRoundedIcon/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

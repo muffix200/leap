@@ -47,6 +47,9 @@ export default function SampleGrid() {
           </p>
         </div>
         <Button
+        onClick={()=>{
+          window.open("https://ornate-lily-48ebc7.netlify.app/")
+        }}
           fullWidth
           sx={{
             "&:hover": {

@@ -58,6 +58,9 @@ export default function SampleGrid2() {
           </p>
         </div>
         <Button
+        onClick={()=>{
+          window.open("https://t.me/leapsupport")
+        }}
           fullWidth
           sx={{
             "&:hover": {

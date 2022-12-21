@@ -88,22 +88,22 @@ export default class SlickCorousel extends Component {
         <Slider {...settings}>
           <Card
             title={"Beginner"}
-            amount={"300.000 so'm "}
+            amount={"450.000 so'm "}
             duration={"2.5 oy"}
           />
           <Card
             title={"Elementary"}
-            amount={"300.000 so'm "}
+            amount={"450.000 so'm "}
             duration={"2 oy"}
           />
           <Card
             title={"Pre-Intermediate"}
-            amount={"300.000 so'm "}
+            amount={"450.000 so'm "}
             duration={"3 oy"}
           />
           <Card
             title={"Intermediate"}
-            amount={"300.000 so'm "}
+            amount={"450.000 so'm "}
             duration={"3 oy"}
           />
         </Slider>

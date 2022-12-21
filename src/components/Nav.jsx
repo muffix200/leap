@@ -1,4 +1,4 @@
-import { Divider, IconButton, Link, Typography } from "@mui/material";
+import { Divider, IconButton, Link, Tooltip, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { themeContext } from "../Parent";
 import ThemeButton from "./ThemeButton";
@@ -83,6 +83,9 @@ export default function Nav() {
         </ul>
         <div className="nav__icons">
           <IconButton
+          onClick={()=>{
+            window.open('tel:950777704', '_self');
+          }}
             sx={{
               width: "30px",
               height: "30px",
@@ -92,7 +95,9 @@ export default function Nav() {
               marginRight: "10px",
             }}
           >
-            <LocalPhoneRoundedIcon sx={{ color: "#11B86D" }} fontSize="small" />
+          <Tooltip  title="95) 077-77-04" arrow >
+            <LocalPhoneRoundedIcon  sx={{ color: "#11B86D" }} fontSize="small" />
+            </Tooltip>
           </IconButton>
           <SelectSmall />
           <ThemeButton />

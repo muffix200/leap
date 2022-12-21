@@ -7,10 +7,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 :root {
   --font1: "Source Sans 3";
   --font2: "Montserrat";
 }
+
 /* .video {
   position: relative;
   width: 100%;
@@ -30,8 +32,9 @@
   height: 100%;
 } */
 .fake-nav {
-  height: 55px;
+  height: 13px;
 }
+
 .navbar {
   width: 100%;
   height: 55px;
@@ -53,6 +56,7 @@
   .navbar[data-color="dark"] {
     background-color: #181818;
   }
+
   .navbar[data-color="light"] {
     background-color: #fff;
   }
@@ -62,6 +66,7 @@
   width: 80px;
   object-fit: contain;
 }
+
 .nav__ul {
   display: flex;
   list-style: none;
@@ -73,11 +78,13 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .mobile_menu {
   display: none;
 }
 
 .mainContent {
+  position: relative;
   max-width: 1536px;
   margin: 0 auto;
   padding: 50px;
@@ -89,40 +96,48 @@
   grid-template-columns: repeat(2, 1fr);
   /* background-color: red; */
 }
+
 .mainContent h1 {
   font-family: var(--font2);
   font-weight: 800;
   font-size: 3.3vw;
   line-height: 1.5;
 }
+
 .mainContent h2 {
   font-family: var(--font2);
   font-weight: 400;
   font-size: 20px;
   margin-top: 15px;
 }
+
 .mainContent-second {
   height: 100%;
   /* background-color: red; */
   display: flex;
   justify-content: center;
 }
+
 .btn-group {
   margin-top: 30px;
 }
+
 .course-section {
   padding: 50px;
 }
+
 .video {
   margin: 0 auto;
   width: 90%;
   max-width: 750px;
   aspect-ratio: 16/9;
 }
+
 .iframeVideo {
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  border: none;
 }
 
 /*  -------------------- Corousel --------------------------- */
@@ -159,6 +174,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .Corousel__item__div2 {
   display: flex;
   flex-direction: column;
@@ -186,20 +202,24 @@
   height: 50px;
   background-color: #3f8ae0;
 }
+
 .color-sea h1 {
   font-family: var(--font1);
   color: #fff;
   font-size: 18px;
 }
+
 .color-sea h1 span {
   font-size: 19px;
 }
+
 .color-sea img {
   width: 45px;
   height: 45px;
   object-fit: contain;
   margin-right: 15px;
 }
+
 .flex-img {
   display: flex;
   align-items: flex-start;
@@ -215,6 +235,7 @@
   /* color: var(--blackColor); */
   color: #181818;
 }
+
 .flex-img p {
   padding-top: 2px;
   font-weight: 400;
@@ -243,6 +264,7 @@
   margin: 0 auto;
   max-width: 1300px;
 }
+
 .swipeIcon div {
   padding: 5px 10px;
   border-radius: 10px;
@@ -250,6 +272,7 @@
   border: 1px solid #3f8ae0;
   display: inline-block;
 }
+
 /*  -------------------- Corousel Button ---------------- */
 .corouselButton {
   width: 100%;
@@ -265,6 +288,7 @@
   justify-content: center;
   margin: 10px 0;
 }
+
 /*  -------------------- Feedback ---------------- */
 
 .feedback-paragraph {
@@ -274,6 +298,7 @@
   padding: 10px 0;
   background-color: #3f8ae0;
 }
+
 .feedback-message {
   font-size: 18px;
   font-family: var(--font1);
@@ -290,9 +315,11 @@
   justify-content: space-evenly;
   /* align-items: center; */
 }
+
 .itemOne {
   width: 48%;
 }
+
 .itemTwo {
   padding: 0 10px;
   width: 48%;
@@ -304,6 +331,7 @@
   justify-content: space-between;
   /* background-color: red; */
 }
+
 .itemTwo h1 {
   font-size: 25px;
   padding: 0 0 10px 0;
@@ -312,33 +340,163 @@
   /* text-align: left; */
   border-radius: 20px;
 }
+
 .itemTwo p {
   font-family: var(--font1);
   font-size: 18px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .itemOne img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
+/*  -------------------- Footer --------------------------- */
+.footer {
+  padding: 20px 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  -------------------- Register section --------------------------- */
+
+.register_nav {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.register-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.register_nav--back {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/*  -------------------- Form --------------------------- */
+
+.form-section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: red; */
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 95%;
+  max-width: 350px;
+}
+
+.form-paragraph {
+  width: 95%;
+  max-width: 350px;
+
+}
+
+/*  -------------------- Rules --------------------------- */
+.rules-wrapper {
+  pointer-events: none;
+  padding: 0 15px;
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  top: 90%;
+  z-index: 102;
+}
+
+.rules-wrapper--button {
+  pointer-events: all;
+}
+
+/*  -------------------- stickyFragment --------------------------- */
+
+.stickyFragment {
+  position: static;
+}
+
+
+/*  -------------------- Modal  --------------------------- */
+
+.modal-controller {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  justify-content: flex-end;
+  height: 50px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.modal-context {
+  overflow: auto;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  pointer-events: all;
+  border-radius: 10px;
+}
+
+.makeloading {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.reminder {
+  width: 95%;
+  margin: auto;
+  max-width: 400px;
+}
+
 /*  -------------------- Media --------------------------- */
 @media (max-width: 900px) {
+
   /*  -------------------- Nav and mobile nav ------------ */
   .user_icon {
     display: none;
   }
+
   .mobile_menu {
     display: flex;
   }
+
   .nav__ul {
     display: none;
   }
+
   .navbar {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* @media (max-width: 1365px) {
   .mainContent h1 {
     font-size: 3.2vw;
@@ -349,63 +507,99 @@
   .mainContent h1 {
     font-size: 37px;
   }
+
   .course-section {
     padding: 50px 20px;
   }
+
   .mainContent {
     padding: 50px 20px;
   }
+
   .navbar {
     padding: 0 20px;
   }
 }
 
 @media (max-width: 1000px) {
+  .Corousel__item2 {
+    height: 260px !important;
+  }
+
   .mainContent {
     grid-template-columns: 1fr;
   }
+
   .mainContent h1 {
     width: 80%;
   }
+
   .mySwiper {
     width: 90%;
   }
+
   .sampleGrid {
     flex-wrap: wrap;
     height: auto;
   }
+
   .itemOne {
     width: 90%;
     margin-bottom: 50px;
   }
+
   .itemTwo {
     width: 95%;
   }
+
   .itemTwo div {
     margin-bottom: 50px;
   }
+
   .divider-main {
     font-size: 25px !important;
   }
 }
+
 @media (max-width: 590px) {
+  .form-section {
+    padding: 50px 10px 10px 10px;
+  }
+
+  .modal-header {
+    display: flex;
+    padding: 0 10px;
+  }
+
+  .modal-context {
+    margin-top: 50px;
+    max-height: calc(95% - 50px);
+  }
+
   .mySwiper {
     overflow: hidden;
   }
+
   .mainContent h1 {
-    font-size: 27px;
+    font-size: 25px;
     width: 95%;
   }
+
   .divider-main {
     font-size: 18px !important;
     width: 100%;
   }
+
   .course-section {
     padding: 50px 0;
   }
+
   .video {
-    width: 95%;
+    width: 98%;
+    /* aspect-ratio: ; */
+    /* min-height: 200px; */
   }
+
   /* .slick-prev:before {
     display: none;
   }
@@ -416,15 +610,16 @@
   .slick-next:before {
     display: none;
   }
+
   .slick-prev:before {
     display: none;
   }
+
   .sampleGrid {
     padding: 0px;
   }
-  .Corousel__item2{
-   height: 260px !important;
-  }
+
+
 }
 
 @media (min-width: 1536px) {
@@ -432,11 +627,13 @@
     font-size: 50px;
   }
 }
+
 @media (min-width: 1920px) {
   .mainContent {
     padding: 0;
   }
 }
+
 /*  -------------------- Media --------------------------- */
 
 /* -------------- Accordion -------------- */
@@ -446,6 +643,7 @@
   max-width: 1300px;
   margin: 50px auto;
 }
+
 .acc-wrapper {
   margin: 15px 0;
   border-radius: 20px;
@@ -456,13 +654,22 @@
 
 /* -------------- Scroll indicator option -------------- */
 * {
-  scrollbar-width: thick; /* none | auto  */
+  scrollbar-width: thick;
+  /* none | auto  */
   scrollbar-color: seagreen transparent;
 }
+
+
+.modal-context::-webkit-scrollbar {
+  width: 0;
+}
+
 /* Chrome, Edge, Safari */
 *::-webkit-scrollbar {
-  width: 3px; /* vertical scrollbar */
-  height: 10px; /* horizontal scrollbar */
+  width: 3px;
+  /* vertical scrollbar */
+  height: 10px;
+  /* horizontal scrollbar */
 }
 
 *::-webkit-scrollbar-track {

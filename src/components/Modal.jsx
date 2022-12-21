@@ -4,6 +4,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { borderRadius } from '@mui/system';
+import ReactAudioPlayer from 'react-audio-player';
+import { themeContext } from '../Parent';
+import { IconButton } from '@mui/material';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const style = {
   position: 'absolute',
@@ -11,39 +15,66 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   maxWidth: 400,
-  width:"90%",
-  bgcolor: 'background.paper',
-  border: '0px solid #000',
+  maxHeight:450,
+  width: "90%",
+  backgroundColor: '#fff',
+  // border: '1px solid #000',
   boxShadow: 24,
-  p: 4,
+  padding:"20px 15px",
   outline: "none",
-  borderRadius:"10px"
-
+  // borderRadius: "10px",
 };
 
-export default function BasicModal({isOpen}) {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+export default function BasicModal({ value, handleClose }) {
+
+  const { isDark: isDarkTheme } = React.useContext(themeContext);
+
+  const {context,isVisible,link,name} = value
 
   return (
-    <div>
+    
       <Modal
-        open={isOpen}
+        open={isVisible}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{background:"rgba(0,0,0,0.7)"}}
+        sx={{ background: isDarkTheme?"rgba(255,255,255,0.7)":"rgba(0,0,0,0.7)" }}
       >
-        <Box sx={style}>
+      
+      <div className='modal-controller'>
+
+       <div className='modal-header'> 
+         <IconButton onClick={handleClose}  sx={{borderWidth:1,backgroundColor:"#FF3347",width:"30px",height:"30px"}}>
+          <CloseRoundedIcon sx={{color:"#fff"}}/>
+         </IconButton>
+       </div>
+
+        <div className='modal-context'>
+         
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            {name}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box>
+
+          {context &&
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              {context}
+            </Typography>
+          }
+          {link &&
+
+            <ReactAudioPlayer
+             style={{marginTop:"10px",width:"100%"}}
+              src={link}
+              controls
+            />
+          }
+        </div>
+
+        
+
+        </div>
+
       </Modal>
-    </div>
+    
   );
 }

@@ -76,7 +76,7 @@ function ResponsiveDrawer(props) {
       text: {
         default: "#f8f8f8",
         primary: "#f6f6f6",
-        secondary: "#4f5874",
+        secondary: "#f6f6f6",
       },
     },
   };

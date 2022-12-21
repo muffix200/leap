@@ -1,11 +1,24 @@
 import { Button } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { themeContext } from "../Parent";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import BasicModal from "./Modal";
 export default function FeedbackBox({ data }) {
-  console.log(data, " +++++++++=");
   const { isDark: isDarkTheme, func } = useContext(themeContext);
+  const [modal,setModal]=useState({isVisible:false,context:false,link:false,name:false})
+  
+  const openModal=(context,link,name)=>{
+    setModal({isVisible:true,context:context,link:link,name:name})
+  }
+
+   const closeModal=()=>{
+    setModal({isVisible:false,context:false,link:false,name:false})
+   }
+  
+  
   return (
+    <>
+    <BasicModal value={modal} handleClose={()=>{closeModal()}}/>
     <div className="Corousel__item2">
       <div
         className="Corousel__item__div2"
@@ -51,6 +64,7 @@ export default function FeedbackBox({ data }) {
         </div>
 
         <Button
+          onClick={()=>openModal(data?.comment,data?.url,data?.name)}
           sx={{
             borderRadius: "20px",
             // backgroundColor: "#3F8AE0",
@@ -63,5 +77,6 @@ export default function FeedbackBox({ data }) {
         </Button>
       </div>
     </div>
+    </>
   );
 }

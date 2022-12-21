@@ -9,17 +9,14 @@ export default class SlickCorousel2 extends Component {
 
   //
   render() {
-    console.log(Boolean(this.props?.data), " ------");
-
     var settings = {
-      dots: true,
       infinite: false,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
       initialSlide: 0,
       infinite: true,
-      dots: true,
+      dots: false,
       className: "mySwiper",
       //   id: "mySwiper",
       //   className: "slider-center",
@@ -74,7 +71,7 @@ export default class SlickCorousel2 extends Component {
       <>
         <Slider {...settings}>
           {Boolean(this.props?.data) &&
-            this.props?.data.map((e) => <FeedbackBox data={e} />)}
+            this.props?.data.map((e, index) => <FeedbackBox key={index} data={e} />)}
         </Slider>
       </>
     );

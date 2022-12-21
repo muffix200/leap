@@ -11,9 +11,9 @@ export default function App() {
     <Box sx={{ height: "100vh", backgroundColor: "background.default" }}>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="about" element={<Register />} />
-        <Route path="contact" element={<Login />} />
-        <Route path="contact" element={<MyProfile />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="profile" element={<MyProfile />} />
       </Routes>
     </Box>
   );
